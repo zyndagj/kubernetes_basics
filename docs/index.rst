@@ -1,7 +1,7 @@
-Reproducible Science - Python Packaging
+Kubernetes Tutorial - Basic Concepts
 =======================================
 
-Tutorial on creating a reproducible python package.
+Walkthrough of basic Kubernetes concepts
 
 .. toctree::
    :maxdepth: 1
