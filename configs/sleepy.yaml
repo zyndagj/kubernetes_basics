@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sleepy
+spec:
+  selector:
+    matchLabels:
+      app: sleepy-server
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: sleepy-server
+    spec:
+      containers:
+      - name: sleepy-server
+        image: gzynda/sleepy-server:latest
+        command: ["sleepy-server.py"]
+        args: ["-p","80"]
+        ports:
+        - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: sleepy-svc
+  labels:
+    app: sleepy
+spec:
+  type: LoadBalancer
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 9376
+  selector:
+    app: sleepy-server

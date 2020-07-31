@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pingpong
+spec:
+  selector:
+    matchLabels:
+      app: ping-app
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: ping-app
+    spec:
+      containers:
+      - name: pingpong
+        image: alpine
+        command: ["ping"]
+        args: ["8.8.8.8"]
