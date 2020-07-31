@@ -1,13 +1,15 @@
 Running our first pod
 =====================
 
-Just to be clear, Kubernetes runs "pods", not containers.
-
 In this example we are going to:
 
-1. Create a pod that happens to run a single alpine linux container
+1. Create a pod that *happens* to run a single alpine linux container
 2. The container will run the ``ping``
 3. We'll ping Google's public DNS (8.8.8.8)
+
+.. note::
+
+   Just to be clear, Kubernetes runs "pods", not containers.
 
 Starting the pod
 ++++++++++++++++
@@ -26,7 +28,7 @@ You can confirm this by listing all running pods.
 
    kubectl get pods -o wide
 
-It should have been started on our only worker node, node2.
+It should have been started on our only worker node, ``node2``.
 
 Viewing output
 ++++++++++++++

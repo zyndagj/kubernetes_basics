@@ -1,7 +1,7 @@
 Creating your Kubernetes cluster
 ================================
 
-Launch and configure a 2-node Kubernetes cluster on `labs.play-with-k8s.com <https://labs.play-with-k8s.com>`_.
+In this section, we will launch and configure a 2-node Kubernetes cluster on `labs.play-with-k8s.com <https://labs.play-with-k8s.com>`_.
 
 Launching your k8 instance
 --------------------------
@@ -85,3 +85,21 @@ if everything was set up correctly, you should see output similar to the followi
 At this point, your 2-node Kubernetes cluster with one orchestrator and one worker is set up and ready to accept tasks.
 If you wanted to add another worker to your cluster, just repeat the steps in this sub-section.
 Kubernetes can scale up to 5,000 workers, and each worker can be a VM or a physical machine that "joins" the cluster.
+
+Kubernetes Terminology
+======================
+
+Now that you've seen a basic cluster, lets cover some terminology before jumping into commands.
+
+:Pod: Smallest deployable unit. Consists of 1 or more containers. Kind of like “localhost”.
+:Deployment: Multiple pods.
+:Service: Expose a pod or deployment to network.
+:Volume: Attach storage.
+:Namespace: Permissions-based grouping of objects.
+:Job: Run a container to completion.
+
+And more not covered today:
+
+:ConfigMap: Store strings or files for pods to use.
+:Secret: Encrypted configmap.
+:Ingress: Expose HTTP+S routes to the network. Like a HTTP-specific Service.

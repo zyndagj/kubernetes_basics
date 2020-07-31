@@ -13,6 +13,7 @@ Tutorial on creating a reproducible python package.
    04-first-container
    05-first-deployment
    06-networking
+   07-conclusions
 
 .. toctree::
    :maxdepth: 1

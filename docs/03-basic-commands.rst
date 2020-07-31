@@ -3,23 +3,6 @@ Basic Kubernetes commands
 
 On your orchestrator node (node1), lets run through the following commands to learn about what they do.
 
-Kubernetes Terminology
-----------------------
-
-:Pod: Smallest deployable unit. Consists of 1 or more containers. Kind of like “localhost”.
-:Deployment: Multiple pods.
-:Service: Expose a pod or deployment to network.
-:Volume: Attach storage.
-:Namespace: Permissions-based grouping of objects.
-:Job: Run a container to completion.
-
-And more not covered today:
-
-:ConfigMap: Store strings or files for pods to use.
-:Secret: Encrypted configmap.
-:Ingress: Expose HTTP+S routes to the network. Like a HTTP-specific Service.
-:DaemonSet, ReplicaSet, LoadBalancer, etc.: More ways to do things.
-
 Kubernetes commands
 -------------------
 
