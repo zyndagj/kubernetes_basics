@@ -39,7 +39,10 @@ Get the external port of your deployment by listing your available services and 
 Paste both the URL and PORT into your web browser in the URL:PORT format to view the running webpage from this deployment.
 
 You'll notice that the webpage displays the name of the host it is being served from, sleeps for half a second, and then finishes printing "Hello World!".
-You can stress-test the performance of this server with `seige <https://www.joedog.org/siege-manual/>`_ using 1 worker (``-c1``), 0 delay (``-d0``), and 10 tries (``-r10``).
+If the page takes around half a second to complete loading every time it is requested, how many pages can be served per second?
+
+We can confirm this by stress-testing the web server with `seige <https://www.joedog.org/siege-manual/>`_ using 1 worker (``-c1``), 0 delay (``-d0``), and 10 tries (``-r10``).
+I recommend running the docker container directly for this use case.
 
 ::
 
@@ -62,7 +65,7 @@ You can stress-test the performance of this server with `seige <https://www.joed
    Longest transaction:            0.51
    Shortest transaction:           0.50
 
-Which should show that the server can make ~2 responses per second, since it sleeps for half a second when rendering the page.
+Which should confirm that the deployment can serve ~2 responses per second, since it sleeps for half a second when rendering the page.
 
 Scaling the web server
 ----------------------
