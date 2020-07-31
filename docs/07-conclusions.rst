@@ -38,6 +38,7 @@ Kubernetes
 :Documentation: https://kubernetes.io/docs/home/
 :Tutorials: https://kubernetes.io/docs/tutorials/
 :Cheat Sheet: https://kubernetes.io/docs/reference/kubectl/cheatsheet/
+:TACC Institute: https://ancantu.github.io/SCICLD2019/docs/kubernetes/kubernetes.html
 
 TACC Tutorials
 ++++++++++++++
